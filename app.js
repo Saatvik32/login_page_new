@@ -48,7 +48,7 @@ app.post("/failure",function(req,res){
     res.redirect("/");
 })
 
-app.listen(300 || process.env.PORT,function(){
+app.listen(300,function(){
     console.log("Server is running");
 });
 
