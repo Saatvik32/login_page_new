@@ -50,7 +50,7 @@ app.post("/failure",function(req,res){
     res.redirect("/");
 })
 
-server.listen(port,()=>{
+app.listen(port,()=>{
     console.log("Running on port");
 })
 
