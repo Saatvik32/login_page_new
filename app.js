@@ -4,6 +4,8 @@ const https = require("https");
 const app=express();
 const bodyParser=require("body-parser");
 const { request } = require('http');
+const port=process.env.PORT || 300 ;
+const server =https.createServer(app);
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true}));
@@ -48,9 +50,13 @@ app.post("/failure",function(req,res){
     res.redirect("/");
 })
 
-app.listen(300,function(){
-    console.log("Server is running");
-});
+server.listen(port,()=>{
+    console.log("Running on port");
+})
+
+// app.listen(300,function(){
+//     console.log("Server is running");
+// });
 
 
 //api key
